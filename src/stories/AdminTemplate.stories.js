@@ -3,7 +3,7 @@ import AdminLayout from '@/components/layout/AdminLayout.vue';
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
-  title: 'Components/Layouts',
+  title: 'Layouts/Main',
   tags: ["autodocs"],
   component: AdminLayout,
 };

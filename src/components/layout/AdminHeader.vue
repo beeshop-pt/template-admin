@@ -26,8 +26,8 @@
 
                 <div class="navbar-end">
                     <app-loader v-if="isFetchingJobs"></app-loader>
-                    <app-changelog v-if="changelogAccount" :account="changelogAccount" selector=".changelog"
-                        trigger=".changelog" />
+                    <!-- <app-changelog v-if="changelogAccount" :account="changelogAccount" selector=".changelog"
+                        trigger=".changelog" /> -->
 
                     <div class="navbar-item">
                         <div class="navbar-item has-dropdown is-hoverable">
