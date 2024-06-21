@@ -1,17 +1,15 @@
 <template>
     <div class="container">
         <div class="centered-div">
-            <form class="card shadow p-3 mb-5 rounded" @submit.prevent="submitForm" style="width: 500px;">
+            <form class="card" @submit.prevent="submitForm" style="width: 500px;">
 
-                <div class="card-body">
+                <div class="card-content">
                     <app-logo></app-logo>
                     <hr>
 
-                    <h6 class="alt-font font-weight-500 text-extra-dark-gray">{{
-                        $t('password_recovery.change_password')}}</h6>
 
                     <div v-if="errors != null">
-                        <p class="font-weight-bold mb-2">{{ $t('password_recovery.errors') }}</p>
+                        <p class="font-weight-bold mb-2"> {{ $t('password_recovery.errors') }}</p>
 
                         <div v-for="(messages, key) in errors" :key="key">
                             <p v-for="(message, key) in messages" :key="key">
@@ -19,29 +17,44 @@
                             </p>
                         </div>
                     </div>
-                </div>
+                    <div class="field">
+                        <label class="label">{{ $t('password_recovery.your_email') }}</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="email" name="email" id="email" v-model="data.email">
+                            <span class="icon is-small is-left">
+                                <font-awesome-icon icon="fas fa-user"></font-awesome-icon>
+                            </span>
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <input class="form-control" type="email" name="email" id="email"
-                        :placeholder="$t('password_recovery.your_email')" v-model="data.email">
-                </div>
+                    <div class="field">
+                        <label class="label">{{ $t('password_recovery.your_password') }}</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="password" name="password" id="password" v-model="data.password">
+                            <span class="icon is-small is-left">
+                                <font-awesome-icon icon="fas fa-key"></font-awesome-icon>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <label class="label">{{ $t('password_recovery.your_password_confirmation') }}</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" type="password_confirmation" name="password_confirmation"
+                                id="password_confirmation" v-model="data.password_confirmation">
+                            <span class="icon is-small is-left">
+                                <font-awesome-icon icon="fas fa-key"></font-awesome-icon>
+                            </span>
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <input class="form-control" type="password" name="password" id="password"
-                        :placeholder="$t('password_recovery.your_password')" v-model="data.password">
-                </div>
+                    <input type="hidden" name="token" :value="data.token">
 
-                <div class="mb-3">
-                    <input class="form-control" type="password" name="password_confirmation" id="password_confirmation"
-                        :placeholder="$t('password_recovery.your_password_confirmation')"
-                        v-model="data.password_confirmation">
-                </div>
-
-                <input type="hidden" name="token" :value="data.token">
-
-                <div class="mb-3">
-                    <button id="btn-login" class="btn btn-primary w-100" type="submit">{{
-                        $t('password_recovery.save')}}</button>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button type="submit" id="btn-login" class="button is-link">{{
+                                $t('password_recovery.change_password') }}</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>

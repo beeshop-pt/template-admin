@@ -1,8 +1,8 @@
 <template>
     <div class="container">
         <div class="centered-div">
-            <form class="card shadow p-3 mb-5 rounded" @submit.prevent="submitForm" style="width: 500px;">
-                <div class="card-body">
+            <form class="card" @submit.prevent="submitForm" style="width: 500px;">
+                <div class="card-content">
                     <AppLogo />
 
                     <hr />
@@ -16,23 +16,34 @@
                             </p>
                         </div>
                     </div>
+                    <div class="field">
+                        <label class="label">{{ $t('login.email') }}</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id="email" class="input" type="email" name="email" v-model="data.email">
+                            <span class="icon is-small is-left">
+                                <font-awesome-icon icon="fas fa-user"></font-awesome-icon>
+                            </span>
+                        </div>
+                    </div>
 
-                    <div class="mb-3">
-                        <label for="email" class="form-label">{{ $t('login.email') }}</label>
-                        <input type="email" id="email" name="email" class="form-control" aria-describedby="emailHelp"
-                            v-model="data.email">
+                    <div class="field">
+                        <label class="label">{{ $t('login.password') }}</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input id="password" class="input" type="password" name="password" v-model="data.password">
+                            <span class="icon is-small is-left">
+                                <font-awesome-icon icon="fas fa-key"></font-awesome-icon>
+                            </span>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="password" class="form-label">{{ $t('login.password') }}</label>
-                        <input type="password" name="password" id="password" class="form-control"
-                            v-model="data.password">
-                    </div>
+
                     <div class="mb-3">
                         <a href="/password-recovery">{{ $t('login.forgot_password') }}</a>
                     </div>
-
-                    <button type="submit" id="btn-login" class="btn btn-primary w-100">{{ $t('login.login')
-                        }}</button>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button type="submit" id="btn-login" class="button is-link">{{ $t('login.login') }}</button>
+                        </div>
+                    </div>
                 </div>
             </form>
         </div>
@@ -40,7 +51,6 @@
 </template>
 
 <script setup>
-import AppLogo from './AppLogo.vue';
 import { ref } from 'vue'
 import { usePage } from "@helpers";
 

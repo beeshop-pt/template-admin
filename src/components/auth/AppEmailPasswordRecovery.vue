@@ -1,15 +1,14 @@
 <template>
-   <div class="container">
+    <div class="container">
         <div class="centered-div">
-            <form class="card shadow p-3 mb-5 rounded" @submit.prevent="submitForm" style="width: 500px;">
-                <div class="card-body">
+            <form class="card " @submit.prevent="submitForm" style="width: 500px;">
+                <div class="card-content">
                     <app-logo></app-logo>
                     <hr>
 
-                    <h6 class="alt-font font-weight-500 text-extra-dark-gray">{{ $t('email_recovery.recover_password')}}</h6>
 
                     <div v-if="errors != null">
-                        <p class="font-weight-bold mb-2">{{ $t('email_recovery.errors')}}</p>
+                        <p class="font-weight-bold mb-2">{{ $t('email_recovery.errors') }}</p>
 
                         <div v-for="(messages, key) in errors" :key="key">
                             <p v-for="(message, key) in messages" :key="key">
@@ -18,14 +17,21 @@
                         </div>
                     </div>
 
-                    <div class="mb-3">
-                    <input class="form-control" type="email" name="email" id="email"
-                        :placeholder="$t('email_recovery.your_email')" v-model="data.email">
+                    <div class="field">
+                        <label class="label">{{ $t('email_recovery.your_email') }}</label>
+                        <div class="control has-icons-left has-icons-right">
+                            <input class="input" :placeholder="$t('email_recovery.your_email')" type="email"
+                                name="email" id="email" v-model="data.email">
+                            <span class="icon is-small is-left">
+                                <font-awesome-icon icon="fas fa-key"></font-awesome-icon>
+                            </span>
+                        </div>
                     </div>
-
-                    <div>
-                    <button id="btn-login" class="btn btn-primary w-100"
-                        type="submit">{{ $t('email_recovery.send_email')}}</button>
+                    <div class="field is-grouped">
+                        <div class="control">
+                            <button type="submit" id="btn-login" class="button is-link">{{
+                                $t('email_recovery.send_email') }}</button>
+                        </div>
                     </div>
                 </div>
             </form>

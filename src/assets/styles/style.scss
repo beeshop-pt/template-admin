@@ -1,7 +1,6 @@
 // variables
 
-$family-serif:
-    "Nunito",
+$family-serif: "Nunito",
     BlinkMacSystemFont,
     -apple-system,
     "Segoe UI",
@@ -30,6 +29,7 @@ $secundary: $secondBase;
 // imports
 
 @import 'bulma/css/bulma.css';
+// @import 'bootstrap';
 
 // styles
 
@@ -153,7 +153,7 @@ nav.navbar {
     text-align: left;
 }
 
-.is-info input[type="checkbox"]:checked + label::before {
+.is-info input[type="checkbox"]:checked+label::before {
     background-color: $base;
     border-color: $base;
 }
@@ -235,7 +235,7 @@ li li li {
     padding-left: 35px;
 }
 
-.force-align-end > .checkbox-item {
+.force-align-end>.checkbox-item {
     align-items: end !important;
 }
 
