@@ -1,0 +1,251 @@
+{
+    "pt": {
+        "all": "Todos",
+        "clients": "Clientes",
+        "clients_types": "Tipos de Clientes",
+        "clients_entities": "Tipo de Entidades",
+        "category": "Categoria",
+        "categories": "Categorias",
+        "close": "Fechar",
+        "open": "Abrir",
+        "allow": "Permitir",
+        "block": "Bloquear",
+        "allow_all": "Permitir Todos",
+        "block_all": "Bloquear Todos",
+        "select-option": "Selecione uma Operação",
+        "related_products": "Produtos Relacionados",
+        "associated_products": "Produtos Associados",
+        "available": "Disponível",
+        "unavailable": "Indisponível",
+        "description": "Descrição",
+        "full_description": "Descrição Completa",
+        "tech_info": "Informações Técnicas",
+        "dimensions": "Dimensões",
+        "docs": "Documentação",
+        "media": "Multimédia",
+        "article_manufacturer": "Artigo de Fabrico",
+        "no_results_found": "Não foram encontrados resultados",
+        "outside_bounds": "Valor está fora dos limites",
+        "category-permissions": {
+            "tasks": "Dependendo da operação esta tarefa pode demorar.",
+            "with-users": "With Users"
+        },
+        "login": {
+            "errors": "Verifique os seguintes erros:",
+            "email": "Email",
+            "password": "Password",
+            "forgot_password": "Esqueceu-se da palavra passe?",
+            "login": "Login"
+        },
+        "email_recovery": {
+            "recover_password": "Recuperação Password",
+            "errors": "Verifique os seguintes erros:",
+            "send_email": "Enviar Email",
+            "your_email": "O seu endereço de email"
+        },
+        "password_recovery": {
+            "change_password": "Alterar Password",
+            "errors": "Verifique os seguintes erros:",
+            "your_email": "O seu endereço de email",
+            "your_password": "A sua palavra-passe",
+            "your_password_confirmation": "A sua palavra-passe (confirmação)",
+            "save": "Guardar"
+        },
+        "datatable": {
+            "predifined": "Predefinidos",
+            "simple": "Simples",
+            "without_translation": "Sem Tradução",
+            "contains": "contém",
+            "starts_with": "começa com",
+            "ends_with": "termina em",
+            "quick_search": "Pesquisa rápida",
+            "new_record": "Novo Registo",
+            "actions": "Ações",
+            "export_selected": "Exportar Selecionado(s)",
+            "export_all": "Exportar Todos",
+            "out_of": "de",
+            "lines": "linhas"
+        },
+        "datatable_pagination": {
+            "previous": "Anterior",
+            "current": "(atual)",
+            "next": "Próxima"
+        },
+        "input_banner": {
+            "select_image": "Selecionar Imagem"
+        },
+        "input_checkbox": {
+            "yes": "Sim",
+            "no": "Não"
+        },
+        "input_color_picker": {
+            "select_color": "Selecionar Cor"
+        },
+        "input_file": {
+            "select_file": "Selecionar um ficheiro",
+            "no_file_selected": "Nenhum ficheiro selecionado"
+        },
+        "input_image": {
+            "select_image": "Selecionar Imagem"
+        },
+        "input_image_content": {
+            "add": "Adicionar"
+        },
+        "input_json": {
+            "valid_json": "JSON válido",
+            "invalid_json": "JSON inválido"
+        },
+        "input_select": {
+            "select": "Pesquisar",
+            "no_records": "Sem Registos"
+        },
+        "input_translations": {
+            "field": "Campo",
+            "language": "Linguagem",
+            "add_language": "Adicione uma nova Linguagem",
+            "editable_field": "Campo editavel nas traduções"
+        },
+        "buttons_form": {
+            "save": "Guardar",
+            "save_close": "Guardar e fechar",
+            "cancel": "Cancelar"
+        },
+        "input_categorias": {
+            "edit": "Editar",
+            "categories": "Categorias",
+            "open_all": "Abrir Todas",
+            "close_all": "Fechar Todas",
+            "relate": "Relacionar com a categoria Root (principal)",
+            "drag_drop": "drag-and-drop",
+            "reorganize_1": "As categorias podem ser reorganizadas (",
+            "reorganize_2": ") para qualquer ordem.",
+            "path": "Caminho",
+            "save": "Guardar"
+        }
+    },
+    "en": {
+        
+        "all": "All",
+        "clients": "Clients",
+        "clients_types": "Client Types",
+        "clients_entities": "Client Entities",
+        "category": "Category",
+        "categories": "Categories",
+        "close": "Close",
+        "open": "Open",
+        "allow": "Allow",
+        "block": "Block",
+        "allow_all": "Allow All",
+        "block_all": "Block All",
+        "select-option": "Select an Option",
+        "related_products": "Related Products",
+        "associated_products": "Associated Products",
+        "available": "Available",
+        "unavailable": "Unvailable",
+        "description": "Description",
+        "full_description": "Full Description",
+        "tech_info": "Technical Information",
+        "dimensions": "Dimensions",
+        "docs": "Documentation",
+        "media": "Multimedia",
+        "article_manufacturer": "Manufactured Article",
+        "no_results_found": "No results found",
+        "outside_bounds": "Value outside of bounds",
+        "category-permissions": {
+            "tasks": "Depending on the operation, this task may take time.",
+            "with-users": "With Users"
+        },
+        "login": {
+            "errors": "Verify the following errors:",
+            "email": "Email",
+            "password": "Password",
+            "forgot_password": "Forgot your password?",
+            "login": "Login"
+        },
+        "email_recovery": {
+            "recover_password": "Password Recovery",
+            "errors": "Verify the following errors:",
+            "send_email": "Send Email",
+            "your_email": "Your email address"
+        },
+        "password_recovery": {
+            "change_password": "Change Password",
+            "errors": "Verify the following errors:",
+            "your_email": "Your email address",
+            "your_password": "Your password",
+            "your_password_confirmation": "Your password (confirmation)",
+            "save": "Save"
+        },
+        "datatable": {
+            "predifined": "Predefined",
+            "simple": "Simple",
+            "without_translation": "Without Translation",
+            "contains": "contains",
+            "starts_with": "starts with",
+            "ends_with": "ends with",
+            "quick_search": "Quick search",
+            "new_record": "New Record",
+            "actions": "Actions",
+            "export_selected": "Export Selected",
+            "export_all": "Export All",
+            "out_of": "out of",
+            "lines": "lines"
+        },
+        "datatable_pagination": {
+            "previous": "Previous",
+            "current": "(current)",
+            "next": "Next"
+        },
+        "input_banner": {
+            "select_image": "Select Image"
+        },
+        "input_checkbox": {
+            "yes": "Yes",
+            "no": "No"
+        },
+        "input_color_picker": {
+            "select_color": "Select Color"
+        },
+        "input_file": {
+            "select_file": "Select file",
+            "no_file_selected": "No file selected"
+        },
+        "input_image": {
+            "select_image": "Select Image"
+        },
+        "input_image_content": {
+            "add": "Add"
+        },
+        "input_json": {
+            "valid_json": "Valid JSON",
+            "invalid_json": "Invalid JSON"
+        },
+        "input_select": {
+            "select": "Search",
+            "no_records": "No Records"
+        },
+        "input_translations": {
+            "field": "Field",
+            "language": "Language",
+            "add_language": "Add a new language",
+            "editable_field": "Field editable in translations"
+        },
+        "buttons_form": {
+            "save": "Save",
+            "save_close": "Save and close",
+            "cancel": "Cancel"
+        },
+        "input_categorias": {
+            "edit": "Edit",
+            "categories": "Categories",
+            "open_all": "Open All",
+            "close_all": "Close All",
+            "relate": "Relate with Root category (principal)",
+            "drag_drop": "drag-and-drop",
+            "reorganize_1": "The categories can be reorganized (",
+            "reorganize_2": ") in any order.",
+            "path": "Path",
+            "save": "Save"
+        }
+    }
+}
