@@ -1,4 +1,4 @@
-import messages from "../lang/all";
+import messages from "@/lang/all.json";
 import { createI18n } from "vue-i18n";
 
 export const translations = createI18n({

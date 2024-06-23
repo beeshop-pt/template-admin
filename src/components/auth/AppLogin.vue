@@ -4,9 +4,7 @@
             <form class="card" @submit.prevent="submitForm" style="width: 500px;">
                 <div class="card-content">
                     <AppLogo />
-
                     <hr />
-
                     <div v-if="errors != null">
                         <p class="font-weight-bold mb-2">{{ $t('login.errors') }}</p>
 
@@ -52,9 +50,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { usePage } from "@helpers";
 
-const { page } = usePage()
 const errors = ref(null)
 const data = ref({ email: null, password: null })
 

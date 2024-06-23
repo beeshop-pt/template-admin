@@ -1,4 +1,4 @@
-import './assets/styles/style.scss'
+import './assets/style.scss'
 
 import axios from 'axios';
 
@@ -43,28 +43,12 @@ window.notyf = new Notyf({
     ],
 });
 
-
-import { createApp } from "vue/dist/vue.esm-bundler";
+import { createApp } from "vue/dist/vue.esm-bundler.js";
 const app = createApp();
 
-import { components } from '@helpers'
 
-const adminComponents = {
-    install: (app) => {
-        const components = import.meta.glob("./components/**/*.vue", {
-            eager: true,
-        });
-        Object.entries(components).forEach(([path, definition]) => {
-            const componentName = path
-                .split("/")
-                .pop()
-                .replace(/\.\w+$/, "");
-            app.component(componentName, definition.default);
-        });
-    },
-};
 // Font Awesome
-import { translations } from './plugins/i18n'
+import { translations } from '@/plugins/i18n.js'
 app.use(translations)
 
 //emitter
@@ -98,6 +82,25 @@ const slugify = (str) => {
 
 app.config.globalProperties.slugify = slugify;
 
-app.use(components).use(adminComponents)
+
+import { components } from '@helpers'
+app.use(components)
+
+const adminComponents = {
+    install: (app) => {
+        const components = import.meta.glob("./components/**/*.vue", {
+            eager: true,
+        });
+        Object.entries(components).forEach(([path, definition]) => {
+            const componentName = path
+                .split("/")
+                .pop()
+                .replace(/\.\w+$/, "");
+            app.component(componentName, definition.default);
+        });
+    },
+};
+app.use(adminComponents)
+
 
 app.mount('#beeshop-app')

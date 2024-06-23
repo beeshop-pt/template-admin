@@ -1,4 +1,4 @@
-import '../src/assets/styles/style.scss'
+import '../src/assets/style.scss'
 
 import { translations } from '../src/plugins/i18n'
 import { setup } from '@storybook/vue3';

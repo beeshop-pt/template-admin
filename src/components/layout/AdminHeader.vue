@@ -69,8 +69,8 @@ const emitter = inject('emitter')
 const isFetchingJobs = ref(false)
 const companyName = Object.keys(company).includes('name') ? company.name : 'BeeShop'
 
-// const changelogAccount = process.env.MIX_BEESHOP_CHANGELOG_ACCOUNT && process.env.MIX_BEESHOP_CHANGELOG_ACCOUNT != undefined
-//     ? process.env.MIX_BEESHOP_CHANGELOG_ACCOUNT
+// const changelogAccount = process.env.VITE_BEESHOP_CHANGELOG_ACCOUNT && process.env.VITE_BEESHOP_CHANGELOG_ACCOUNT != undefined
+//     ? process.env.VITE_BEESHOP_CHANGELOG_ACCOUNT
 //     : false
 
 const changelogAccount = false
