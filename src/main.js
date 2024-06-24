@@ -1,4 +1,5 @@
 import './assets/style.scss'
+import "dropzone/dist/dropzone.css"
 
 import axios from 'axios';
 
@@ -13,7 +14,6 @@ if (token) {
         "CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token",
     );
 }
-
 
 import "notyf/notyf.min.css";
 import { Notyf } from "notyf";
@@ -46,7 +46,6 @@ window.notyf = new Notyf({
 import { createApp } from "vue/dist/vue.esm-bundler.js";
 const app = createApp();
 
-
 // Font Awesome
 import { translations } from '@/plugins/i18n.js'
 app.use(translations)
@@ -66,8 +65,6 @@ library.add(fas);
 library.add(far);
 
 app.component("font-awesome-icon", FontAwesomeIcon);
-
-
 const slugify = (str) => {
     if (!str) {
         return str;
@@ -101,6 +98,4 @@ const adminComponents = {
     },
 };
 app.use(adminComponents)
-
-
 app.mount('#beeshop-app')

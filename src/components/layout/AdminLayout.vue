@@ -1,10 +1,17 @@
 <template>
     <div class="site app-fluid" v-if="can('access admin')">
-        <AdminHeader></AdminHeader>
-        <AdminSidebar></AdminSidebar>
+        <!-- <AdminHeader></AdminHeader>
+        <AdminSidebar></AdminSidebar> -->
         <div class="content-app margin-left-content px-5 pb-5">
             <div class="box mb-5">
                 <slot></slot>
+            </div>
+        </div>
+    </div>
+    <div class="site app-fluid" v-else>
+        <div class="content-apppx-5 pb-5">
+            <div class="box mb-5">
+                <h1>Esta acção não está autorizada. </h1>
             </div>
         </div>
     </div>

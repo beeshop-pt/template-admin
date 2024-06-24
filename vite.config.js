@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
     },
     build: {
       outDir: '../../beeshop/public/assets/admin',
+      minify: false,
       rollupOptions: {
         output: {
           entryFileNames: `[name].js`,
