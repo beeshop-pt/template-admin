@@ -65,6 +65,10 @@ axios.post(`/admin/pages/fetch`, {
             operator: "equals",
             column: "show_in_menu",
             value: 1
+        }, {
+            operator: "equals",
+            column: "is_active",
+            value: 1
         }
     ]
 }).then((res) => {

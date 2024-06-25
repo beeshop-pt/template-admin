@@ -1,13 +1,9 @@
 <template>
-    <div class="mb-2">
+    <div v-if="props.name" :class="['column  mb-2', props.class]">
         <label :for="props.name" class="label">
             {{ props.title }}
         </label>
-        <select v-model="props.modelValue[props.name]" class="bee-select-options input select p-1">
-            <option value="1">TEste 1</option>
-            <option value="2">TEste 2</option>
-        </select>
-        <!-- <div :id="'bee-select-' + props.name" class="bee-select w-100" style="position: relative">
+        <div :id="'bee-select-' + props.name" class="bee-select w-100" style="position: relative">
             <div class="bee-select-options input select p-1" @click="openOption()"
                 :class="{ 'disabled': props.disabled }">
                 <p class="bee-select-option px-2" v-for="(item, i) in selectedOptions">
@@ -15,55 +11,55 @@
                         <span v-if="i != 0"> | </span>
                         <span>{{ item[key] }}</span>
                     </template>
-<small @click="removeOption(i)">
-    <font-awesome-icon icon="fa-close" class="ml-2" />
-</small>
-</p>
-</div>
-<div :id="'bee-select-items-' + props.name" class="bee-select-items"
-    :class="{ 'show': showOptions, 'hidden': !showOptions }">
-    <div class="d-flex">
-        <input type="text" class="input" v-model="searchInput.value" :placeholder="$t('input_select.select')"
-            @input="search">
-        <div class="select ml-2">
-            <select v-model="searchInput.column">
-                <option v-for="key in props.fields" :value="key">{{ key }}</option>
-            </select>
-        </div>
-    </div>
+                    <small @click="removeOption(i)">
+                        <font-awesome-icon icon="fa-close" class="ml-2" />
+                    </small>
+                </p>
+            </div>
+            <div :id="'bee-select-items-' + props.name" class="bee-select-items"
+                :class="{ 'show': showOptions, 'hidden': !showOptions }">
+                <div class="d-flex">
+                    <input type="text" class="input" v-model="searchInput.value"
+                        :placeholder="$t('input_select.select')" @input="search">
+                    <div class="select ml-2">
+                        <select v-model="searchInput.column">
+                            <option v-for="key in props.fields" :value="key">{{ key }}</option>
+                        </select>
+                    </div>
+                </div>
 
-    <div class="mt-2">
-        <template v-if="list && list.length">
+                <div class="mt-2">
+                    <template v-if="list && list.length">
                         <p class="bee-select-item py-1 px-2" :class="{ 'text-bold': checkIfExists(item.id) }"
                             v-for="( item, key ) in list " :key="key" @click="selectOption(item)">
                             <template v-for="(key, i) in props.fields">
                                 <span v-if="i != 0"> | </span>
                                 <span>{{ item[key] }}</span>
                             </template>
-        </p>
-        </template>
+                        </p>
+                    </template>
 
-        <template v-else-if="!isLoading">
+                    <template v-else-if="!isLoading">
                         <p class="bee-select-item py-1 px-2">
                             {{ $t('input_select.no_records') }}
                         </p>
                     </template>
 
-        <template v-else>
+                    <template v-else>
                         <app-loader></app-loader>
                     </template>
+                </div>
+            </div>
+            <input type="hidden" :name="props.name" v-model="props.modelValue[props.name]" />
+        </div>
     </div>
-</div>
-{{ props.modelValue }}
-<input type="hidden" :name="model" :value="selectIds()" v-model="props.modelValue[props.name]" />
-</div>-->
-    </div>
+    <small v-else class="help"> No Name set</small>
 </template>
 
 <script setup>
 
 import { v4 as uuid } from 'uuid'
-import { reactive, ref, watch } from "vue"
+import { reactive, ref, watch, onMounted } from "vue"
 
 const emit = defineEmits(['update:modelValue'])
 
@@ -122,24 +118,9 @@ const props = defineProps({
 })
 
 const isLoading = ref(false)
-const selectedOptions = ref([])
+const selectedOptions = ref(props.modelValue[props.name] ?? [])
 const list = ref([])
 const showOptions = ref(false)
-
-watch(props, (newValue, oldValue) => {
-
-    selectedOptions.value = []
-    if (newValue.valueProp) {
-        if (props.isMultiple) {
-            selectedOptions.value = newValue.valueProp
-        } else {
-            selectedOptions.value = [newValue.valueProp]
-        }
-    }
-
-    initSelect()
-    search()
-})
 
 let model = props.name
 
@@ -176,14 +157,9 @@ const initSelect = () => {
     })
 }
 
-if (props.valueProp && !props.isMultiple) {
-    selectedOptions.value.push(props.valueProp)
-}
-if (props.valueProp && props.isMultiple) {
-    props.valueProp.forEach((e) => {
-        selectedOptions.value.push(e)
-    })
-}
+watch(selectedOptions.value, (newValue) => {
+    props.modelValue[props.name] = selectIds()
+});
 
 const selectOption = (item) => {
     if (selectedOptions.value.find((e) => e.id == item.id)) {
@@ -241,16 +217,18 @@ const selectIds = () => {
     }, [])
 }
 
-document.addEventListener('click', function (event) {
-    const parent = document.getElementById('bee-select-' + props.name)
-    const div = document.getElementById('bee-select-items-' + props.name)
-    const targetElement = event.target
-    if (parent && parent.contains(targetElement)) {
-        return
-    }
-    if (div && !div.contains(targetElement)) {
-        showOptions.value = false
-    }
+onMounted(() => {
+    document.addEventListener('click', function (event) {
+        const parent = document.getElementById('bee-select-' + props.name)
+        const div = document.getElementById('bee-select-items-' + props.name)
+        const targetElement = event.target
+        if (parent && parent.contains(targetElement)) {
+            return
+        }
+        if (div && !div.contains(targetElement)) {
+            showOptions.value = false
+        }
+    })
 })
 
 initSelect()

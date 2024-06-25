@@ -1,5 +1,4 @@
 import './assets/style.scss'
-import "dropzone/dist/dropzone.css"
 
 import axios from 'axios';
 
@@ -50,12 +49,12 @@ const app = createApp();
 import { translations } from '@/plugins/i18n.js'
 app.use(translations)
 
-//emitter
+// emitter
 import mitt from "mitt";
 const emitter = mitt();
 app.provide("emitter", emitter);
 
-//fontawesome
+// fontawesome
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";

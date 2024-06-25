@@ -1,5 +1,5 @@
 <template>
-    <div class="mb-2">
+    <div :class="['column  mb-2', props.class]">
         <label :for="props.name" class="label">
             {{ props.title }}
         </label>
