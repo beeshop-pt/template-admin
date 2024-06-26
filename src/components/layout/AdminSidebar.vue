@@ -7,7 +7,7 @@
                     <ul v-for="child in item.children" class="menu-list" :class="{ 'menu-list-expanded': true }">
                         <li>
                             <a :id="slugify(child.slug)" :class="{ 'is-active': url == child.url }"
-                                :href="child.slug">
+                                :href="child.slug.charAt(0) === '/' ? child.slug : '/' + child.slug">
                                 {{ child.label }}
                             </a>
                         </li>

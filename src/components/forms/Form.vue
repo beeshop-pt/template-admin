@@ -22,7 +22,7 @@ const submit = async () => {
     try {
         let res
         const headers = { headers: { 'Content-Type': 'multipart/form-data' } }
-        if (Object.keys(modelValue).length) {
+        if (Object.keys(props.modelValue).length) {
             formData.append("_method", "put")
             res = await axios.post(props.endpoint, formData, headers)
         } else {

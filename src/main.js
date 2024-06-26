@@ -1,5 +1,4 @@
 import './assets/style.scss'
-
 import axios from 'axios';
 
 window.axios = axios;
@@ -79,8 +78,8 @@ const slugify = (str) => {
 app.config.globalProperties.slugify = slugify;
 
 
-import { components } from '@helpers'
-app.use(components)
+import * as Helpers from '@helpers'
+app.use(Helpers.components)
 
 const adminComponents = {
     install: (app) => {

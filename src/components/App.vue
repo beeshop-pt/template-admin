@@ -4,7 +4,7 @@ const design = {
     {
       component: "AdminLayout",
       children: [{
-        component: "Datatable",
+        component: "input-textarea",
         configs: {
           displayble: {
             id: { name: 'ID' },

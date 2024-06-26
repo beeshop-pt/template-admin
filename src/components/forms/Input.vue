@@ -6,7 +6,7 @@
         <div class="mt-2">
             <div v-if="props.name"
                 class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600">
-                <input :type="props.type ?? 'text'" name="username" :id="props.name" class="input"
+                <input :type="props.type ?? 'text'" :name="props.name" :id="props.name" class="input"
                     :placeholder="props.placeholder" v-model="props.modelValue[props.name]" />
             </div>
             <small v-else class="help"> No Name set</small>
