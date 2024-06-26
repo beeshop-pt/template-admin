@@ -4,9 +4,9 @@
             {{ props.title }}
         </label>
         <div class="mt-2">
-            <textarea :id="props.id" class="tiny-editor" output-format="html" v-model="props.modelValue[props.name]"
-                model-events="change keydown blur focus paste" autocomplete="false"></textarea>
-            <input type="hidden" :name="props.name" :value="props.modelValue[props.name]">
+            <textarea :id="props.id" class="tiny-editor" :name="props.name" output-format="html"
+                v-model="props.modelValue[props.name]" model-events="change keydown blur focus paste"
+                autocomplete="false"></textarea>
         </div>
     </div>
 </template>
@@ -60,9 +60,6 @@ const validEvents = [
     'Remove',
 ];
 
-const emit = defineEmits(["update:modelValue"])
-
-
 const uploadHandler = async (blobInfo, progress) => {
     const formData = new FormData();
     formData.append("file[]", blobInfo.blob());
@@ -89,9 +86,7 @@ onMounted(() => {
                     if (content.includes('<p><br data-mce-bogus="1"></p>') || content.includes('<p></p>')) {
                         content = ''
                     }
-
-                    itemValue.value = content
-                    emit('update:modelValue', content)
+                    props.modelValue[props.name] = content
                 }
             })
         },
@@ -106,11 +101,6 @@ onMounted(() => {
         branding: false
     });
 })
-
-watch(props, () => {
-    itemValue.value = props.modelValue
-})
-
 </script>
 
 <style scoped>
