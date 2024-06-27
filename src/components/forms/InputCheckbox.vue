@@ -5,7 +5,7 @@
         </label>
         <div class="field">
             <div v-if="props.name" class="select is-fullwidth">
-                <select :id="name" :name="props.name" :disabled="disabled" v-model="props.modelValue[props.name]">
+                <select :id="name" :name="props.name" :disabled="disabled" v-model="computedValue">
                     <option value="1">{{ $t('input_checkbox.yes') }}</option>
                     <option value="0">{{ $t('input_checkbox.no') }}</option>
                 </select>
@@ -17,6 +17,7 @@
 </template>
 
 <script setup>
+import { ref, watch } from 'vue';
 const props = defineProps({
     name: {
         required: false,
@@ -40,4 +41,12 @@ const props = defineProps({
     },
     modelValue: Object
 });
+const emits = defineEmits(['update:modelValue'])
+
+const computedValue = ref(props.modelValue[props.name] ?? '1')
+
+watch(computedValue, () => {
+    props.modelValue[props.name] = computedValue.value
+})
+
 </script>

@@ -50,7 +50,7 @@
                     </template>
                 </div>
             </div>
-            <input type="hidden" :name="props.name" v-model="props.modelValue[props.name]" />
+            <input type="hidden" :name="props.modelKey ?? props.name" :value="selectIds()" />
         </div>
     </div>
     <small v-else class="help"> No Name set</small>
@@ -118,7 +118,7 @@ const props = defineProps({
 })
 
 const isLoading = ref(false)
-const selectedOptions = ref(props.modelValue[props.name] ?? [])
+const selectedOptions = ref(props.modelValue[props.name] ? Array.isArray(props.modelValue[props.name]) ? props.modelValue[props.name] : [props.modelValue[props.name]] : [])
 const list = ref([])
 const showOptions = ref(false)
 
@@ -158,7 +158,7 @@ const initSelect = () => {
 }
 
 watch(selectedOptions.value, (newValue) => {
-    props.modelValue[props.name] = selectIds()
+    props.modelValue[props.name] = selectedOptions.value
 });
 
 const selectOption = (item) => {

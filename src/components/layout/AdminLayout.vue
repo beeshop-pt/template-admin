@@ -4,7 +4,7 @@
         <AdminSidebar></AdminSidebar>
         <div class="content-app margin-left-content px-5 pb-5">
             <div class="box mb-5">
-                <Form :endpoint="props.endpoint">
+                <Form :endpoint="props.endpoint" :method="props.method" >
                     <slot></slot>
                 </Form>
             </div>
@@ -27,6 +27,10 @@ const props = defineProps({
     endpoint: {
         required: false,
         default: false
+    },
+    method: {
+        required: false,
+        default: 'post'
     }
 })
 
