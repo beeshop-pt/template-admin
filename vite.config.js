@@ -18,15 +18,5 @@ export default defineConfig(({ mode }) => {
         '@helpers': resolve('../template-helpers')
       }
     },
-    build: {
-      outDir: '../../beeshop/public/assets/admin',
-      rollupOptions: {
-        output: {
-          entryFileNames: `[name].js`,
-          chunkFileNames: `[name].js`,
-          assetFileNames: `[name].[ext]`
-        },
-      },
-    }
   }
 })
