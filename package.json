@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build  --emptyOutDir",
+    "build": "vite build --emptyOutDir --mode production",
     "watch": "vite build --watch --emptyOutDir --mode=development",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
