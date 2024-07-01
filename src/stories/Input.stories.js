@@ -25,6 +25,14 @@ export const InputEmail = {
   }
 }
 
+export const InputPassword = {
+  args: {
+    title: 'Input Password',
+    name: 'input-password',
+    type: 'password',
+  }
+}
+
 export const InputNumber = {
   args: {
     title: 'Input Number',
