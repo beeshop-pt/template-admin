@@ -1,4 +1,6 @@
 import './assets/style.scss'
+import "dropzone/dist/dropzone.css";
+
 import axios from 'axios';
 
 window.axios = axios;

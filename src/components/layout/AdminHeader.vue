@@ -3,7 +3,7 @@
         <div class="container is-fluid">
             <div class="navbar-brand">
                 <a class="navbar-item" href="/admin" title="Visitar a página de administração">
-                    <img src="@assets/logotypes/beeshop-horizontal.svg">
+                    <app-logo></app-logo>
                 </a>
 
                 <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false">

@@ -4,11 +4,12 @@
         <AdminSidebar></AdminSidebar>
         <div class="content-app margin-left-content px-5 pb-5">
             <div class="box mb-5">
-                <Form :endpoint="props.endpoint" :method="props.method" >
+                <Form :endpoint="props.endpoint" :method="props.method">
                     <slot></slot>
                 </Form>
             </div>
         </div>
+        <ResourcesModal :endpoint="'/admin/resources'"></ResourcesModal>
     </div>
     <div class="site app-fluid" v-else>
         <div class="content-apppx-5 pb-5">
@@ -21,6 +22,7 @@
 
 <script setup>
 import { useAuth } from '@helpers'
+import ResourcesModal from '../misc/ResourcesModal.vue';
 
 const { can } = useAuth()
 const props = defineProps({
