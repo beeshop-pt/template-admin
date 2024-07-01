@@ -1,12 +1,12 @@
 <template>
     <div class="centered-div">
-        <div style="width: 500px" class="card">
+        <div style="width: 500px" class="card p-3">
             <div class="card-content">
                 <div class="field">
-                    <img style="display: block; width: 30%; margin-left: auto; margin-right: auto; margin-bottom: 10px" src="@/assets/logotypes/beeshop-abelha.svg">
+                    <img style="display: block; width: 30%; margin-left: auto; margin-right: auto; margin-bottom: 10px" src="@/assets/logotypes/beeshop-favicon.svg">
                     <p style="text-align: center; font-size: 22px; font-weight: bold">Bem vindo ao Beeshop!</p>
                 </div>
-                <div class="field">
+                <div class="field my-5">
                     <p style="text-align: center">
                         Antes de começar a utilizar todas as funcionalidades disponíveis, será necessário fazer algumas configurações:
                         configurar o logotipo, o favicon, o email geral, o email de notificações e o limite máximo de ficheiros.
@@ -25,7 +25,7 @@
     </div>
 </template>
 
-<style>
+<style scoped>
 
 body {
     background-color: #f8f8f8;

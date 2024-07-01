@@ -1,12 +1,12 @@
-import { fn } from '@storybook/test';
-import Datatable from '@/components/datatable/Datatable.vue';
+import { fn } from '@storybook/test'
+import Datatable from '@/components/datatable/Datatable.vue'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
   title: 'Components/Datatable',
   tags: ["autodocs"],
   component: Datatable,
-};
+}
 
 export const Main = {
   render: (args) => ({
@@ -38,4 +38,4 @@ export const Main = {
     },
     user: { permissions: [{ name: 'access admin' }] }
   },
-};
+}

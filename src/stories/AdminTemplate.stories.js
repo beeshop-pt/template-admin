@@ -1,17 +1,17 @@
-import { fn } from '@storybook/test';
-import AdminLayout from '@/components/layout/AdminLayout.vue';
+import { fn } from '@storybook/test'
+import AdminLayout from '@/components/layout/AdminLayout.vue'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
   title: 'Layouts/Main',
   tags: ["autodocs"],
   component: AdminLayout,
-};
+}
 
 export const Main = {
   render: (args) => ({
     setup() {
-      return { args };
+      return { args }
     },
     template: `<AppContent v-bind="args"></AppContent>`,
   }),
@@ -19,4 +19,4 @@ export const Main = {
     design: { contents: [{ component: 'AdminLayout' }] },
     user: { permissions: [{ name: 'access admin' }] }
   },
-};
+}

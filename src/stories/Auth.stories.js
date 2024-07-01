@@ -1,15 +1,15 @@
-import { fn } from '@storybook/test';
+import { fn } from '@storybook/test'
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
   title: 'Components/Auth',
   tags: ["autodocs"],
-};
+}
 
 export const Login = {
   render: (args) => ({
     setup() {
-      return { args };
+      return { args }
     },
     template: `<AppContent v-bind="args"></AppContent>`,
   }),
@@ -28,7 +28,7 @@ export const Login = {
     },
     user: { permissions: [{ name: 'access admin' }] }
   },
-};
+}
 
 export const PasswordRecovery = {
   render: (args) => ({
@@ -52,7 +52,7 @@ export const PasswordRecovery = {
     },
     user: { permissions: [{ name: 'access admin' }] }
   },
-};
+}
 
 export const EmailPasswordRecovery = {
   render: (args) => ({
@@ -76,4 +76,4 @@ export const EmailPasswordRecovery = {
     },
     user: { permissions: [{ name: 'access admin' }] }
   },
-};
+}
