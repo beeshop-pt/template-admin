@@ -23,7 +23,7 @@
                         <button type="submit" id="welcome-later" class="button is-secondary">Mais tarde</button>
                     </div>
                     <div class="control">
-                        <button type="submit" id="welcome-start" href="/login" class="button is-link">Começar</button>
+                        <button type="submit" id="welcome-start" class="button is-link">Começar</button>
                     </div>
                 </div>
             </div>
