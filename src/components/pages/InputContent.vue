@@ -8,7 +8,7 @@
                         @click="() => selectedContent = element">
                         <div style="display: flex;align-items: center;">
                             <input type="checkbox" :checked="element.is_selected" style="width: 14px; height: 14px" />
-                            <p>{{ element.title }}</p>
+                            <p>{{ element.title ?? element.name }}</p>
                         </div>
                         <button v-if="element.children && element.children.length" type="button"
                             @click="orderTree(element.children, stats)">
@@ -24,7 +24,7 @@
             </div>
         </div>
 
-        <div class="column is-6" style="border-left: 1px solid lightgray;">
+        <div class="column" style="border-left: 1px solid lightgray;">
             <div v-if="selectedContent">
                 <h1 class="subtitle">Informação</h1>
                 <label for="content-title">Titulo</label>
