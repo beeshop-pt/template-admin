@@ -38,8 +38,6 @@ const menu = [
         label: "WEBSITE",
         children: [
             { label: "Páginas", slug: "/admin/pages", allow: true },
-            { label: "Formulários", slug: "/admin/forms", allow: true },
-            { label: "Componentes", slug: "/admin/pages/components", allow: !!user },
             { label: "Templates", slug: "/admin/templates", allow: true },
         ],
         allow: true
