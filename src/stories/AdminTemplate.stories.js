@@ -5,7 +5,7 @@ import AdminLayout from '@/components/layout/AdminLayout.vue'
 export default {
   title: 'Layouts/Main',
   tags: ["autodocs"],
-  component: AdminLayout,
+  component: AdminLayout
 }
 
 export const Main = {

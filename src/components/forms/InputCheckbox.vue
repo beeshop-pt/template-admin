@@ -17,7 +17,9 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+
+import { ref, watch } from 'vue'
+
 const props = defineProps({
     name: {
         required: false,
@@ -40,7 +42,8 @@ const props = defineProps({
         default: null,
     },
     modelValue: Object
-});
+})
+
 const emits = defineEmits(['update:modelValue'])
 
 const computedValue = ref(props.modelValue[props.name] ?? '1')

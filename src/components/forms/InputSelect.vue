@@ -159,7 +159,7 @@ const initSelect = () => {
 
 watch(selectedOptions.value, (newValue) => {
     props.modelValue[props.name] = selectedOptions.value
-});
+})
 
 const selectOption = (item) => {
     if (selectedOptions.value.find((e) => e.id == item.id)) {

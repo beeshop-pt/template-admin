@@ -58,21 +58,21 @@ const validEvents = [
     'Dirty',
     'FocusOut',
     'Remove',
-];
+]
 
 const uploadHandler = async (blobInfo, progress) => {
     const formData = new FormData();
-    formData.append("file[]", blobInfo.blob());
+    formData.append("file[]", blobInfo.blob())
 
     try {
         let res = await axios.post("/admin/resources", formData);
         if (Object.keys(res.data).includes("file")) {
-            return res.data.file.route;
+            return res.data.file.route
         }
     } catch (e) {
         console.error(e)
     }
-};
+}
 
 onMounted(() => {
     tinymce.init({
@@ -99,12 +99,15 @@ onMounted(() => {
         disabled: props.disabled,
         height: props.height,
         branding: false
-    });
+    })
 })
+
 </script>
 
 <style scoped>
+
 .readonly {
     background: whitesmoke;
 }
+
 </style>

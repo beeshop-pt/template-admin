@@ -17,11 +17,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
 
-const operation = ref('save');
+import { ref } from 'vue'
+
+const operation = ref('save')
 
 const changeOperation = (value) => {
     operation.value = value
 }
+
 </script>

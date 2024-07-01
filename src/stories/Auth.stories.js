@@ -3,7 +3,7 @@ import { fn } from '@storybook/test'
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 export default {
   title: 'Pages/Auth',
-  tags: ["autodocs"],
+  tags: ["autodocs"]
 }
 
 export const Login = {

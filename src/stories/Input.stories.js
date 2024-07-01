@@ -41,3 +41,19 @@ export const InputDate = {
     type: 'date',
   }
 }
+
+export const InputFile = {
+  args: {
+    title: 'Input File',
+    name: 'input-file',
+    type: 'file',
+  }
+}
+
+export const InputColor = {
+  args: {
+    title: 'Input Color',
+    name: 'input-color',
+    type: 'color',
+  }
+}

@@ -1,4 +1,13 @@
+<template>
+    <form id="website-form" :class="props.class" @submit.prevent="submit">
+        <slot></slot>
+
+        <form-buttons v-if="props.endpoint"></form-buttons>
+    </form>
+</template>
+
 <script setup>
+
 const props = defineProps({
     modelValue: {
         required: false,
@@ -38,12 +47,5 @@ const submit = async () => {
     }
     return false
 }
+
 </script>
-
-<template>
-    <form id="website-form" :class="props.class" @submit.prevent="submit">
-        <slot></slot>
-
-        <form-buttons v-if="props.endpoint"></form-buttons>
-    </form>
-</template>

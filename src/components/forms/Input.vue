@@ -57,8 +57,10 @@ const props = defineProps({
     },
 })
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(["update:modelValue"])
+
 const updateData = (ev) => {
-    emit("update:modelValue", ev.target.value);
-};
+    emit("update:modelValue", ev.target.value)
+}
+
 </script>

@@ -55,7 +55,7 @@ const selectedContents = ref(props.modelValue[props.name] ?? [])
 
 
 const mapDom = () => {
-    return JSON.stringify(selectedContents.value);
+    return JSON.stringify(selectedContents.value)
 }
 
 const orderTree = (items, stat) => {
@@ -63,14 +63,15 @@ const orderTree = (items, stat) => {
         let catA = a.title;
         let catB = b.title;
         return stat.sortOrder == "asc" ? catB.localeCompare(catA) : catA.localeCompare(catB);
-    });
+    })
 
-    stat.sortOrder = stat.sortOrder == "asc" ? "desc" : "asc";
-};
+    stat.sortOrder = stat.sortOrder == "asc" ? "desc" : "asc"
+}
 
 </script>
 
 <style scoped>
+
 .section-item {
     text-align: center !important;
     vertical-align: middle !important;
@@ -97,4 +98,5 @@ const orderTree = (items, stat) => {
     background-color: #4e5e7d;
     color: white !important;
 }
+
 </style>

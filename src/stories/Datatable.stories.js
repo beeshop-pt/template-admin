@@ -5,7 +5,7 @@ import Datatable from '@/components/datatable/Datatable.vue'
 export default {
   title: 'Components/Datatable',
   tags: ["autodocs"],
-  component: Datatable,
+  component: Datatable
 }
 
 export const Main = {

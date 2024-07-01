@@ -5,7 +5,7 @@ import BeeshopWelcome from '@/components/pages/BeeshopWelcome.vue'
 export default {
   title: "Pages/Welcome",
   tags: ["autodocs"],
-  component: BeeshopWelcome,
+  component: BeeshopWelcome
 }
 
 export const Main = {}
