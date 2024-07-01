@@ -1,16 +1,14 @@
-<script setup lang="ts">
-import BeeshopAbelha from '../logotypes/BeeshopAbelha.vue';
-</script>
-
 <template>
     <div class="centered-div">
         <div style="width: 500px" class="card p-3">
             <div class="card-content">
+                <a v-if="!isLoggedIn" id="welcome-later" href="/login" style="float: right" class="button is-link" type="submit">Login</a>
                 <div class="field">
                     <div style="display: block; width: 30%; margin-left: auto; margin-right: auto; margin-bottom: 10px">
                         <BeeshopAbelha />
                     </div>
-                    <p style="text-align: center; font-size: 22px; font-weight: bold">Bem vindo ao Beeshop!</p>
+                    <p v-if="isLoggedIn" style="text-align: center; font-size: 22px; font-weight: bold">Bem vindo ao Beeshop, {{ user.name }}!</p>
+                    <p v-else style="text-align: center; font-size: 22px; font-weight: bold">Bem vindo ao Beeshop!</p>
                 </div>
                 <div class="field my-5">
                     <p style="text-align: center">
@@ -25,13 +23,22 @@ import BeeshopAbelha from '../logotypes/BeeshopAbelha.vue';
                         <button type="submit" id="welcome-later" class="button is-secondary">Mais tarde</button>
                     </div>
                     <div class="control">
-                        <button type="submit" id="welcome-start" class="button is-link">Começar</button>
+                        <button type="submit" id="welcome-start" href="/login" class="button is-link">Começar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </template>
+
+<script setup lang="ts">
+
+import BeeshopAbelha from '../logotypes/BeeshopAbelha.vue'
+import { useAuth } from '@helpers'
+
+const { user, isLoggedIn } = useAuth()
+
+</script>
 
 <style scoped>
 
