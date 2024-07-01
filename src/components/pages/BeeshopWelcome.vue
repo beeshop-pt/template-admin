@@ -1,8 +1,8 @@
 <template>
+    <a v-if="!isLoggedIn" id="welcome-later" href="/login" style="float: right" class="button is-link m-" type="submit">Login</a>
     <div class="centered-div">
         <div style="width: 500px" class="card p-3">
             <div class="card-content">
-                <a v-if="!isLoggedIn" id="welcome-later" href="/login" style="float: right" class="button is-link" type="submit">Login</a>
                 <div class="field">
                     <div style="display: block; width: 30%; margin-left: auto; margin-right: auto; margin-bottom: 10px">
                         <BeeshopAbelha />
