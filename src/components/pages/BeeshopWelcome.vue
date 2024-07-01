@@ -1,5 +1,5 @@
 <template>
-    <a v-if="!isLoggedIn" id="welcome-later" href="/login" style="float: right" class="button is-link m-5" type="submit">Login</a>
+    <a v-if="!isLoggedIn" id="welcome-later" href="/login" style="position: absolute; top: 0; right: 0" class="button is-link m-5" type="submit">Login</a>
     <div class="centered-div">
         <div style="width: 500px" class="card p-3">
             <div class="card-content">

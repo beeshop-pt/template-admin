@@ -65,3 +65,45 @@ export const InputColor = {
     type: 'color',
   }
 }
+
+// export const InputTextArea = {
+//   render: (args) => ({
+//     setup() {
+//       return { args }
+//     },
+//     template: `<AppContent v-bind="args"></AppContent>`,
+//   }),
+//   args: {
+//     design: {
+//       contents: [
+//         {
+//           component: 'InputTextarea',
+//         }
+//       ]
+//     },
+//     title: 'Input Text Area',
+//     name: 'input-text-area',
+//     type: 'color',
+//   }
+// }
+
+
+// export const InputCheckbox = {
+//   render: (args) => ({
+//     setup() {
+//       return { args }
+//     },
+//     template: `<AppContent v-bind="args"></AppContent>`,
+//   }),
+//   args: {
+//     design: {
+//       contents: [
+//         {
+//           component: 'InputCheckbox',
+//         }
+//       ]
+//     },
+//     title: 'Input Checkbox',
+//     name: 'input-checkbox'
+//   }
+// }

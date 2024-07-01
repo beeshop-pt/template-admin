@@ -58,7 +58,7 @@ const validEvents = [
     'Dirty',
     'FocusOut',
     'Remove',
-];
+]
 
 const uploadHandler = async (blobInfo, progress) => {
     const formData = new FormData();
@@ -72,7 +72,7 @@ const uploadHandler = async (blobInfo, progress) => {
     } catch (e) {
         console.error(e)
     }
-};
+}
 
 onMounted(() => {
     tinymce.init({
@@ -99,12 +99,15 @@ onMounted(() => {
         disabled: props.disabled,
         height: props.height,
         branding: false
-    });
+    })
 })
+
 </script>
 
 <style scoped>
+
 .readonly {
     background: whitesmoke;
 }
+
 </style>
