@@ -19,9 +19,9 @@
                 </template>
             </Tree>
 
-            <div class="mt-3">
+            <!-- <div class="mt-3">
                 <small>Clique nos conteúdos para editar</small><br>
-            </div>
+            </div> -->
         </div>
 
         <div class="column is-6" style="border-left: 1px solid lightgray;">
@@ -31,7 +31,7 @@
                 <input id="content-title" class="input" type="text" v-model="selectedContent.title">
                 <label for="content-component">Component</label>
                 <input id="content-component" class="input" type="text" v-model="selectedContent.component">
-                <small>Arraste os componentes para o conteúdo</small>
+                <!-- <small>Arraste os componentes para o conteúdo</small> -->
             </div>
         </div>
         <input type="hidden" name="contents" :value="mapDom()" />

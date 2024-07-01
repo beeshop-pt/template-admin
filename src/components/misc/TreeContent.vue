@@ -6,7 +6,7 @@
         <div :class="['tree-content', showParentPlaceHolder ? 'hovered' : '']" @dragstart="dragStart($event)">
             <div draggable="true" @dragover="dragOverParent($event)" @drop="drop($event, props.parent, props.index)"
                 style="width: 8px" @dragleave="dragEndParent()">
-                <button style="margin-left: -8px" :class="{
+                <button type="button" style="margin-left: -8px" :class="{
                     hide: !(props.modelValue.children && props.modelValue.children.length),
                 }" @click="() => (show = !show)">
                     <font-awesome-icon v-if="show" :icon="['fas', 'square-minus']" />
