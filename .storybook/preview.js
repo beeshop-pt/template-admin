@@ -5,7 +5,7 @@ import { setup } from '@storybook/vue3';
 import axios from 'axios';
 
 window.axios = axios;
-window.axios.defaults.baseURL= 'http://host.docker.internal:7000/api';
+// window.axios.defaults.baseURL = 'http://host.docker.internal:7000/api';
 
 import mitt from "mitt";
 const emitter = mitt();

@@ -1,15 +1,23 @@
+<script setup lang="ts">
+import BeeshopAbelha from '../logotypes/BeeshopAbelha.vue';
+</script>
+
 <template>
     <div class="centered-div">
         <div style="width: 500px" class="card p-3">
             <div class="card-content">
                 <div class="field">
-                    <img style="display: block; width: 30%; margin-left: auto; margin-right: auto; margin-bottom: 10px" src="@/assets/logotypes/beeshop-favicon.svg">
+                    <div style="display: block; width: 30%; margin-left: auto; margin-right: auto; margin-bottom: 10px">
+                        <BeeshopAbelha />
+                    </div>
                     <p style="text-align: center; font-size: 22px; font-weight: bold">Bem vindo ao Beeshop!</p>
                 </div>
                 <div class="field my-5">
                     <p style="text-align: center">
-                        Antes de começar a utilizar todas as funcionalidades disponíveis, será necessário fazer algumas configurações:
-                        configurar o logotipo, o favicon, o email geral, o email de notificações e o limite máximo de ficheiros.
+                        Antes de começar a utilizar todas as funcionalidades disponíveis, será necessário fazer algumas
+                        configurações:
+                        configurar o logotipo, o favicon, o email geral, o email de notificações e o limite máximo de
+                        ficheiros.
                     </p>
                 </div>
                 <div style="margin: auto; width: 50%" class="field is-grouped">
@@ -38,5 +46,4 @@ body {
     align-items: center;
     justify-content: center;
 }
-
 </style>
